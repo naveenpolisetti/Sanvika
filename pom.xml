@@ -28,5 +28,5 @@
 		    <id>nexus</id>
 		    <url>http://13.233.108.247:8081/repository/Sanvika-release/</url>
 		</repository>
-  	</distributionManagement
-</project>
+  	</distributionManagement>
+ </project>
