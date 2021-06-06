@@ -1,7 +1,7 @@
 pipeline{
     agent any
     environment {
-        TOMCAT_HOST = "${TOMCAT_USR}@13.232.8.36"
+        TOMCAT_HOST = "${TOMCAT_USR}@172.0.1.17"
         TOMCAT_SVC = "/usr/sbin/service tomcat"
     }
     stages{
