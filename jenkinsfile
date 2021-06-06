@@ -22,6 +22,5 @@ pipeline{
                     sh "ssh ${TOMCAT_HOST} ${TOMCAT_SVC} start"
                 }
             }
-        }
-        
+        } 
     }
