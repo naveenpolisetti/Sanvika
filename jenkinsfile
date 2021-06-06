@@ -11,11 +11,7 @@ pipeline{
             steps{
                 sh script: 'mvn clean deploy'
                 script {
-    echo "Start condition check"
-    build job: 'printuser'
-    def slaveJob = build job: 'printuser'
-    println slaveJob.rawBuild.log  
-}
+    
             }
         }
         
@@ -29,3 +25,12 @@ pipeline{
                 }
             }
         } 
+        script {
+            echo "Start condition check"
+                 build job: 'printuser'
+                     def slaveJob = build job: 'printuser'
+                        println slaveJob.rawBuild.log 
+                        
+                   }
+        
+
