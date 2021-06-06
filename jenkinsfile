@@ -10,6 +10,12 @@ pipeline{
         stage('Maven Package and Nexus Deploy'){
             steps{
                 sh script: 'mvn clean deploy'
+                script {
+    echo "Start condition check"
+    build job: 'printuser'
+    def slaveJob = build job: 'printuser'
+    println slaveJob.rawBuild.log  
+}
             }
         }
         
