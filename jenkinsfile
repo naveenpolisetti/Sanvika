@@ -9,7 +9,7 @@ pipeline{
             steps{
                 sh script: 'mvn clean deploy'
                 script {
-    
+               }
             }
         }
         
@@ -22,4 +22,4 @@ pipeline{
                     sh "ssh ${TOMCAT_HOST} ${TOMCAT_SVC} start"
                 }
             }
-
+         }
