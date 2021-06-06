@@ -1,7 +1,6 @@
 pipeline{
     agent any
     environment {
-        TOMCAT_USR = "ec2-user"
         TOMCAT_HOST = "${TOMCAT_USR}@13.232.8.36"
         TOMCAT_SVC = "/usr/sbin/service tomcat"
     }
