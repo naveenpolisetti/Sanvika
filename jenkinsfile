@@ -25,9 +25,4 @@ pipeline{
                 }
             }
         } 
-         @Test
-    public void testGroovySubstitution() {
-        curator = new MockCuratorFramework();
-        assertExpression("${groovy:([1,2,3,4].findAll { it % 2 == 0 \\})}","[2, 4]",false); // Expected: '[2, 4]', Actual: ''
-    }
 
