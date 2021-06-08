@@ -1,15 +1,15 @@
+currentBuild.displayName = "${currentBuild.projectName}#${currentBuild.number}"
 pipeline{
     agent any
     environment {
-        TOMCAT_HOST = "${TOMCAT_USR}@172.0.1.17"
+        TOMCAT_USR = "ec2-user"
+        TOMCAT_HOST = "${TOMCAT_USR}@13.232.8.36"
         TOMCAT_SVC = "/usr/sbin/service tomcat"
     }
     stages{
         stage('Maven Package and Nexus Deploy'){
             steps{
                 sh script: 'mvn clean deploy'
-                script {
-               }
             }
         }
         
@@ -22,6 +22,6 @@ pipeline{
                     sh "ssh ${TOMCAT_HOST} ${TOMCAT_SVC} start"
                 }
             }
-         }
-      }
-   }
+        }
+        
+    
