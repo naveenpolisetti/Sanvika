@@ -17,7 +17,7 @@ pipeline{
             steps{
                 sshagent(['tomcat-dev']) {
                     // copy war file to tomcat dev
-                    sh "scp -i aws-new  target/Sanvika*.war ${TOMCAT_HOST}:/opt/tomcat8/webapps/"
+                    sh "scp -i aws-new /target/Sanvika*.war ${TOMCAT_HOST}:/opt/tomcat8/webapps/"
                     sh "ssh ${TOMCAT_HOST} ${TOMCAT_SVC} stop"
                     sh "ssh ${TOMCAT_HOST} ${TOMCAT_SVC} start"
                 }
