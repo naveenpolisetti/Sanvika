@@ -3,7 +3,7 @@ pipeline{
     agent any
     environment {
         TOMCAT_USR  = "ec2-user"
-        TOMCAT_HOST = "${TOMCAT_USR}@13.232.8.36"
+        TOMCAT_HOST = "${TOMCAT_USR}@172.0.1.225"
         TOMCAT_SVC = "/usr/sbin/service tomcat8"
     }
     stages{
